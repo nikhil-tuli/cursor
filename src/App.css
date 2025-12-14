@@ -1,0 +1,172 @@
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.app h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.todo-container {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.25s;
+}
+
+.todo-input:focus {
+  border-color: #646cff;
+}
+
+.todo-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.add-button {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #646cff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.add-button:hover {
+  background-color: #535bf2;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.25s;
+}
+
+.todo-item:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.todo-item.completed {
+  opacity: 0.6;
+}
+
+.todo-checkbox {
+  width: 1.25rem;
+  height: 1.25rem;
+  cursor: pointer;
+  accent-color: #646cff;
+  flex-shrink: 0;
+}
+
+.todo-text {
+  flex: 1;
+  color: rgba(255, 255, 255, 0.87);
+  word-break: break-word;
+  transition: all 0.25s;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.remove-button {
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  background-color: rgba(255, 0, 0, 0.2);
+  color: #ff6b6b;
+  cursor: pointer;
+  transition: background-color 0.25s;
+  margin-left: 1rem;
+}
+
+.remove-button:hover {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+.empty-message {
+  text-align: center;
+  padding: 2rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+}
+
+@media (prefers-color-scheme: light) {
+  .app h1 {
+    color: #213547;
+  }
+
+  .todo-container {
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+
+  .todo-input {
+    border-color: rgba(0, 0, 0, 0.2);
+    background-color: white;
+    color: #213547;
+  }
+
+  .todo-input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  .todo-item {
+    background-color: rgba(0, 0, 0, 0.02);
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .todo-item:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .todo-item.completed .todo-text {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  .todo-text {
+    color: #213547;
+  }
+
+  .empty-message {
+    color: rgba(0, 0, 0, 0.4);
+  }
+}
+
