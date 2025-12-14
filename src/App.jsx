@@ -30,8 +30,21 @@ function App() {
 
   return (
     <div className="app">
-      <h1>Todo List</h1>
-      <div className="todo-container">
+      <div className="app-layout">
+        {/* Left panel */}
+        <aside className="left-panel">
+          <h2 className="panel-title">Menu</h2>
+          <nav className="panel-nav">
+            <button className="nav-item active">All Todos</button>
+            <button className="nav-item">Active</button>
+            <button className="nav-item">Completed</button>
+          </nav>
+        </aside>
+        
+        {/* Main content area */}
+        <main className="main-content">
+          <h1>Todo List</h1>
+          <div className="todo-container">
         <div className="input-container">
           <input
             type="text"
@@ -68,6 +81,8 @@ function App() {
             ))
           )}
         </ul>
+          </div>
+        </main>
       </div>
     </div>
   )
